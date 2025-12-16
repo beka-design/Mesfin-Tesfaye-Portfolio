@@ -1,0 +1,694 @@
+/* --- 1. Variables & Themes --- */
+:root {
+    /* Light Mode (Default) */
+    --bg-color: #f4f4f0;      /* Warm stone/gallery white */
+    --text-color: #2a2a2a;    /* Charcoal */
+    --accent-color: #8c8c8c;  /* Muted grey */
+    --card-bg: #ffffff;
+    --border-color: rgba(0,0,0,0.1);
+    --hero-overlay: rgba(0,0,0,0.4);
+    
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-ethio: 'Noto Sans Ethiopic', sans-serif;
+    
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Elegant transition */
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Variables */
+    --bg-color: #121212;      /* Deep Matte Black */
+    --text-color: #e0e0e0;    /* Off-white */
+    --accent-color: #666666;
+    --card-bg: #1e1e1e;
+    --border-color: rgba(255,255,255,0.1);
+    --hero-overlay: rgba(0,0,0,0.7);
+}
+
+/* --- 2. Global Reset --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden; /* This cuts off anything spilling to the right */
+    position: relative;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* 🛑 This stops the page from scrolling sideways */
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; }
+:lang(am) h1, :lang(am) h2, :lang(am) h3 { font-family: var(--font-ethio); font-weight: 700; }
+
+.section-tag {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.section-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   NAVIGATION (Updated for New HTML Structure)
+   ========================================= */
+
+/* --- Desktop Layout (Essential updates for new HTML) --- */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: var(--bg-color);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 1002;
+}
+
+/* New Wrapper for Desktop Links */
+.nav-links-wrapper {
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px;
+    background: var(--text-color); transition: var(--transition);
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* Right Side Container (Controls + Hamburger) */
+.nav-right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Inputs */
+#language-switch {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 5px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    cursor: pointer;
+}
+
+.theme-btn, .shop-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.theme-btn:hover, .shop-btn:hover { transform: scale(1.1); }
+
+.hamburger { display: none; }
+
+
+/* =========================================
+   📱 MOBILE FIX (The Logic You Wanted)
+   ========================================= */
+@media (max-width: 968px) {
+    .navbar { 
+        padding: 1.5rem 1rem; 
+        background-color: var(--bg-color); 
+    }
+    
+    /* 1. HIDE the Text Links (Slide-out menu) */
+    .nav-links-wrapper {
+        position: fixed;
+        top: 70px; /* Pushes menu below header */
+        right: -100%; /* Hidden to the right */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        z-index: 998;
+        border-top: 1px solid var(--border-color);
+    }
+
+    /* Class added by JS to show menu */
+    .nav-links-wrapper.active {
+        right: 0;
+    }
+
+    .nav-links {
+        display: flex !important; /* Force it to show */
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: center;
+        width: 100%; /* Ensure it takes width */
+    }
+    
+    .nav-links a { font-size: 1.5rem; }
+
+    /* 2. KEEP Controls Visible in Header */
+    .controls {
+        display: flex; /* Ensures they stay visible */
+        gap: 10px;
+    }
+    
+    /* Resize icons slightly for mobile fit */
+    #language-switch { font-size: 0.75rem; padding: 2px; }
+    .theme-btn, .shop-btn { font-size: 1rem; }
+
+    /* 3. Show Hamburger */
+    .hamburger { 
+        display: block; 
+        margin-left: 10px;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .hamburger span { 
+        display: block; 
+        width: 25px; 
+        height: 2px; 
+        background-color: var(--text-color); 
+        margin: 5px 0; 
+        transition: 0.3s;
+    }
+    
+    /* Hamburger Animation */
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    
+    /* General Mobile Layout Adjustments */
+    .hero-statement { font-size: 2.5rem; }
+    .about-grid, .timeline-grid, .advising-layout { grid-template-columns: 1fr; }
+    .about-img-box { height: 400px; order: -1; }
+}
+
+/* --- 4. Hero Section (Visual Impact) --- */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Always white text on hero image */
+}
+
+/* --- Hero Slideshow Container --- */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: #121212; /* Dark fallback */
+    overflow: hidden;
+}
+
+/* --- Individual Slides --- */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0; /* Start hidden */
+    transform: scale(1);
+    
+    /* 
+       Total Cycle = 25 seconds 
+       5 images x 5 seconds each = 25s
+    */
+    animation: imageFade 25s infinite ease-in-out;
+}
+
+/* --- Individual Slides --- */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0; /* Start hidden */
+    transform: scale(1);
+    
+    /* 
+       CALCULATION:
+       8 images x 5 seconds each = 40 seconds total cycle
+    */
+    animation: imageFade 40s infinite ease-in-out;
+}
+
+/* --- Staggered Delays (5 seconds apart) --- */
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 5s; }
+.hero-slide:nth-child(3) { animation-delay: 10s; }
+.hero-slide:nth-child(4) { animation-delay: 15s; }
+.hero-slide:nth-child(5) { animation-delay: 20s; }
+.hero-slide:nth-child(6) { animation-delay: 25s; }
+.hero-slide:nth-child(7) { animation-delay: 30s; }
+.hero-slide:nth-child(8) { animation-delay: 35s; }
+
+/* --- The Perfect Crossfade Math for 8 Images --- */
+/* 
+   Logic: 100% / 8 images = 12.5% per image "slot"
+   We fade in quickly, stay visible until 12.5%, then fade out.
+*/
+@keyframes imageFade {
+    0% {
+        opacity: 0;
+        transform: scale(1.05); /* Start slightly zoomed in */
+    }
+    3% {
+        opacity: 1; /* Fade in quickly */
+    }
+    12.5% {
+        opacity: 1; /* Stay visible until the next image starts */
+    }
+    15.5% {
+        opacity: 0; /* Fade out while next one fades in */
+        transform: scale(1); /* End zoomed out */
+    }
+    100% {
+        opacity: 0; /* Stay hidden for the rest of the 40s cycle */
+    }
+}
+
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* Always dark overlay for readability */
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 5vw;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* --- 5. About Section (Split Layout) --- */
+.section-padding { padding: 120px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-img-box {
+    position: relative;
+    height: 600px;
+}
+
+.artist-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Artistic feel */
+    transition: var(--transition);
+}
+
+.artist-img:hover { filter: grayscale(0%); }
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.signature {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+/* --- 6. Journey (Timeline) --- */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.year {
+    font-size: 3rem;
+    font-family: var(--font-serif);
+    color: var(--border-color); /* Subtle numeral */
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- 7. Works (Gallery) --- */
+/* --- Gallery / Works Slider --- */
+
+/* 1. Header Layout to align Title and Buttons */
+.gallery-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align bottom of text with buttons */
+    margin-bottom: 2rem;
+}
+
+/* 2. Navigation Buttons Styling */
+.gallery-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-arrow {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.nav-arrow:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* 3. The Scrollable Area */
+.gallery-container {
+    width: 100%;
+    overflow: hidden; /* Hides scrollbar but allows JS scrolling */
+}
+
+.gallery-track {
+    display: flex;
+    gap: 30px; /* Space between images */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    scroll-behavior: smooth;
+    padding-bottom: 20px; /* Space for shadow */
+    
+    /* Hide scrollbar for Chrome/Safari/Opera */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
+/* 4. Art Card Sizing for Slider */
+.art-card {
+    min-width: 350px; /* Fixed width for desktop */
+    flex-shrink: 0;   /* Prevents cards from shrinking */
+    cursor: pointer;
+}
+
+.art-image {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    margin-bottom: 15px;
+    background-color: #e0e0e0; /* Loading placeholder color */
+}
+
+.art-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.art-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    display: flex; justify-content: center; align-items: center;
+    transition: var(--transition);
+}
+
+.view-btn {
+    font-size: 2rem; color: #fff; border: 1px solid #fff;
+    width: 50px; height: 50px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.art-card:hover img { transform: scale(1.05); }
+.art-card:hover .art-overlay { opacity: 1; }
+
+.art-details h4 { font-size: 1.2rem; margin-bottom: 5px; }
+.art-details span { color: var(--accent-color); font-size: 0.9rem; font-style: italic; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .art-card {
+        min-width: 85vw; /* On mobile, show 85% of screen width */
+    }
+    .art-image {
+        height: 400px;
+    }
+    
+    .gallery-header-row {
+        flex-direction: row; /* Keep buttons next to title */
+        align-items: center;
+    }
+    
+    .section-heading {
+        margin-bottom: 0; /* Remove extra margin on mobile */
+        font-size: 2rem;
+    }
+    
+    /* Optional: Hide buttons on mobile if you prefer Swipe only */
+    /* .gallery-controls { display: none; } */
+}
+
+.art-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.art-image {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    margin-bottom: 15px;
+}
+
+.art-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.art-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    display: flex; justify-content: center; align-items: center;
+    transition: var(--transition);
+}
+
+.view-btn {
+    font-size: 2rem; color: #fff; border: 1px solid #fff;
+    width: 50px; height: 50px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.art-card:hover img { transform: scale(1.05); }
+.art-card:hover .art-overlay { opacity: 1; }
+
+.art-details h4 { font-size: 1.2rem; margin-bottom: 5px; }
+.art-details span { color: var(--accent-color); font-size: 0.9rem; font-style: italic; }
+
+/* --- 8. Advising --- */
+.advising { background-color: var(--card-bg); transition: background-color 0.5s; }
+
+.advising-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.abstract-box {
+    width: 100%; height: 500px;
+    background-color: var(--text-color); /* Contrast block */
+}
+
+.service-lead {
+    font-size: 1.5rem; font-family: var(--font-serif);
+    font-style: italic; margin-bottom: 2rem;
+}
+
+.service-list {
+    list-style: none;
+    border-left: 1px solid var(--text-color);
+    padding-left: 20px;
+}
+
+.service-list li {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* --- 9. Contact --- */
+.clean-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px; left: 0;
+    color: var(--accent-color);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+    top: -20px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.submit-btn {
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: block; margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.email-display { text-align: center; margin-top: 40px; }
+.email-display a {
+    font-size: 1.5rem; color: var(--text-color); text-decoration: none;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+.footer-content {
+    display: flex; justify-content: space-between; align-items: center;
+}
+.socials a { color: var(--text-color); margin-left: 20px; font-size: 1.2rem; }
+
+/* --- Mobile --- */
+@media (max-width: 900px) {
+    .hero-title { font-size: 3rem; }
+    .about-grid, .timeline-grid, .advising-layout { grid-template-columns: 1fr; }
+    .nav-links { display: none; } /* Hide menu for now on mobile */
+    .about-img-box { height: 400px; }
+    .abstract-box { display: none; }
+}

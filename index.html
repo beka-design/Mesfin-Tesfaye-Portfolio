@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesfin Tesfaye | The Portfolio</title>
+    
+    <!-- Fonts: Playfair (Serif), Inter (Sans), Noto Sans Ethiopic (Amharic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+Ethiopic:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <!-- 1. Logo -->
+        <a href="#" class="logo">Artist MESFIN TESFAYE</a>
+        
+        <!-- 2. The Text Links (These will slide in/out on mobile) -->
+        <div class="nav-links-wrapper">
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#journey" data-i18n="nav_journey">Journey</a></li>
+                <li><a href="#gallery" data-i18n="nav_works">Works</a></li>
+                <li><a href="#advising" data-i18n="nav_services">Advising</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- 3. The Right Side Group (Controls + Hamburger) -->
+        <div class="nav-right-side">
+            
+            <!-- Controls: Language, Theme, Cart (Always Visible) -->
+            <div class="controls">
+                <select id="language-switch">
+                    <option value="en">EN</option>
+                    <option value="am">አማ</option>
+                    <option value="fr">FR</option>
+                    <option value="or">ORO</option>
+                    <option value="de">DE</option>
+                    <option value="zh">中文</option>
+                    <option value="it">IT</option>
+                    <option value="es">ES</option>
+                    <option value="jp">JP</option>
+                </select>
+
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+                <a href="#" class="shop-btn"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+            <!-- Hamburger (Mobile Only) -->
+            <div class="hamburger" id="mobile-menu-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <!-- Hero Background Slideshow -->
+<div class="hero-bg">
+    <!-- Slide 1 (Original) -->
+    <div class="hero-slide" style="background-image: url('assets/images/1.jpg');"></div>
+    
+    <!-- Slide 2 (Stone Texture) -->
+    <div class="hero-slide" style="background-image: url('assets/images/2.jpg');"></div>
+    
+    <!-- Slide 3 (Abstract Bronze) -->
+    <div class="hero-slide" style="background-image: url('assets/images/3.jpg');"></div>
+    
+    <!-- Slide 4 (Clay/Process) -->
+    <div class="hero-slide" style="background-image: url('assets/images/4.jpg');"></div>
+    
+    <!-- Slide 5 (Gallery Space) -->
+    <div class="hero-slide" style="background-image: url('assets/images/5.jpg');"></div>
+    <!-- Slide 6 (Gallery Space) -->
+    <div class="hero-slide" style="background-image: url('assets/images/6.jpg');"></div>
+    <!-- Slide 7 (Gallery Space) -->
+    <div class="hero-slide" style="background-image: url('assets/images/7.jpg');"></div>
+    <!-- Slide 8 (Gallery Space) -->
+    <div class="hero-slide" style="background-image: url('assets/images/8.jpg');"></div>
+</div> <!-- Background Image Holder -->
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="hero-title" data-i18n="hero_statement">Form is the silence between thoughts.</h1>
+            <p class="hero-subtitle" data-i18n="hero_sub">Sculptor • Painter • Art Consultant</p>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Biography Section -->
+    <section class="about section-padding" id="about">
+        <div class="container about-grid">
+            <div class="about-img-box" data-aos="fade-right">
+                <!-- Artist Portrait Placeholder -->
+                <img src="https://images.unsplash.com/photo-1544222046-d2427a149c41?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mesfin Tesfaye" class="artist-img">
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <h4 class="section-tag" data-i18n="nav_about">Biography</h4>
+                <h2 class="section-heading" data-i18n="bio_title">The Artist</h2>
+                <p data-i18n="bio_p1">Mesfin Tesfaye does not merely occupy space; he interrogates it. With a practice rooted in the tactile intelligence of material and the conceptual rigor of form, Tesfaye has established himself as a distinct voice in contemporary sculpture and painting.</p>
+                <p data-i18n="bio_p2">His work operates at the intersection of Ethiopian cultural depth and modern abstraction. He navigates the delicate balance between the permanence of stone and the fluidity of paint, creating works that serve as dialogues between history and the present moment.</p>
+                <div class="signature">Mesfin.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey / Timeline -->
+    <section class="journey section-padding" id="journey">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h4 class="section-tag" data-i18n="nav_journey">Evolution</h4>
+                <h2 class="section-heading" data-i18n="journey_title">Artistic Timeline</h2>
+            </div>
+            <div class="timeline-grid">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="year">2015</span>
+                    <h3 data-i18n="timeline_1_title">Material Exploration</h3>
+                    <p data-i18n="timeline_1_desc">Early investigations into indigenous stone and wood, establishing a vernacular of texture.</p>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="year">2019</span>
+                    <h3 data-i18n="timeline_2_title">The Abstract Turn</h3>
+                    <p data-i18n="timeline_2_desc">A shift toward minimalism. Reducing form to its essential truth. The removal of the unnecessary.</p>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="year">2024</span>
+                    <h3 data-i18n="timeline_3_title">Synthesis & Advising</h3>
+                    <p data-i18n="timeline_3_desc">Merging the practice of creation with the curation of excellence. Guiding global collections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Works -->
+    <section class="works section-padding" id="gallery">
+        <div class="container">
+            <div class="gallery-header-row">
+                <h2 class="section-heading" data-aos="fade-right" data-i18n="gallery_title">Selected Sculptures</h2>
+                
+                <!-- Navigation Buttons -->
+                <div class="gallery-controls">
+                    <button id="prevBtn" class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextBtn" class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Scrollable Container -->
+            <div class="gallery-container">
+                <div class="gallery-track" id="galleryTrack">
+                    
+                    <!-- --- PASTE YOUR 25+ ART CARDS HERE --- -->
+                    
+                    <!-- Example Card 1 -->
+                    <div class="art-card" data-aos="fade-in">
+                        <div class="art-image">
+                            <img src="assets/images/a.jpg" alt="Sculpture">
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4 data-i18n="art_1_title">His Majesty E.Hailesilasie</h4>
+                            <span data-i18n="art_1_meta">Sculpture, 2022</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 2 -->
+                    <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/b.jpg" alt="Painting">
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4 data-i18n="art_2_title">Addis Echoes</h4>
+                            <span data-i18n="art_2_meta">Oil on Canvas, 2023</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 3 -->
+                    <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/c.jpg" alt="Bronze">
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4 data-i18n="art_3_title">The Weight of Memory</h4>
+                            <span data-i18n="art_3_meta">Bronze Casting, 2021</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/d2a.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+
+                     <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/d.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 5 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/e.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/f.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/g.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/h.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/i.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/j.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/k.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/l.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/l2l.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/m.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/n.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/o.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/p.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/q.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/r.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/s.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/t.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/u.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/v.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/w.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/x.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/y.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/z.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a1.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a2.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a3.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a4.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a5.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- ADD MORE CARDS HERE... -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Gallery / Works: Paintings -->
+<section class="works section-padding" id="gallery">
+    <div class="container">
+        <div class="gallery-header-row">
+            <h2 class="section-heading" data-aos="fade-right" data-i18n="gallery_titl">Painting</h2>
+            
+            <!-- Navigation Buttons (Unique IDs for Painting Section) -->
+            <div class="gallery-controls">
+                <button id="paintingPrevBtn" class="nav-arrow"><i class="fas fa-chevron-left"></i></button>
+                <button id="paintingNextBtn" class="nav-arrow"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Scrollable Container -->
+        <div class="gallery-container">
+            <div class="gallery-track" id="paintingTrack">
+                
+                <!-- Card 1 -->
+                <div class="art-card" data-aos="fade-in">
+                    <div class="art-image">
+                        <img src="assets/images/aa.jpg" alt="Sculpture">
+                        <div class="art-overlay"><span class="view-btn">+</span></div>
+                    </div>
+                    <div class="art-details">
+                        <h4 data-i18n="art_1_titl">Presented to P.M Abiy Ahmed (Ph.D.)</h4>
+                        <span data-i18n="art_1_meta">Sculpture, 2022</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="art-card">
+                    <div class="art-image">
+                        <img src="assets/images/bb.jpg" alt="Painting">
+                        <div class="art-overlay"><span class="view-btn">+</span></div>
+                    </div>
+                    <div class="art-details">
+                        <h4 data-i18n="art_2_title">Addis Echoes</h4>
+                        <span data-i18n="art_2_meta">Oil on Canvas, 2023</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="art-card">
+                    <div class="art-image">
+                        <img src="assets/images/cc.jpg" alt="Bronze">
+                        <div class="art-overlay"><span class="view-btn">+</span></div>
+                    </div>
+                    <div class="art-details">
+                        <h4 data-i18n="art_3_title">The Weight of Memory</h4>
+                        <span data-i18n="art_3_meta">Bronze Casting, 2021</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/dd.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+
+                     <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/ee.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 5 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/ff.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/gg.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/hh.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/ii.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/jj.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/kk.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/ll.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/ll.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/l2l.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/m.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/n.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/o.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/p.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/q.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/r.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/s.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/t.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/u.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/v.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/w.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/x.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/y.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/z.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a1.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a2.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a3.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a4.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Example Card 4 -->
+                     <div class="art-card">
+                        <div class="art-image">
+                            <img src="assets/images/a5.jpg" alt="Bronze">
+                            <!-- Use a placeholder or real image -->
+                            <div style="width:100%; height:100%; background:#ccc;"></div> 
+                            <div class="art-overlay"><span class="view-btn">+</span></div>
+                        </div>
+                        <div class="art-details">
+                            <h4>Future Work</h4>
+                            <span>Mixed Media, 2024</span>
+                        </div>
+                    </div>
+                    
+                    <!-- ADD MORE CARDS HERE... -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Advising -->
+    <section class="advising section-padding" id="advising">
+        <div class="container advising-layout">
+            <div class="advising-content" data-aos="fade-right">
+                <h4 class="section-tag" data-i18n="nav_services">Advising</h4>
+                <h2 class="section-heading" data-i18n="service_title">Art Advising</h2>
+                <p class="lead-text" data-i18n="service_lead">Curating legacy. Defining taste.</p>
+                <p data-i18n="service_desc">Mesfin Tesfaye offers private consultation for collectors and institutions seeking to build meaningful portfolios. With an approach grounded in academic rigor and market intuition, he bridges the gap between creator and custodian.</p>
+                <ul class="service-list">
+                    <li data-i18n="service_li_1">Collection Strategy & Curation</li>
+                    <li data-i18n="service_li_2">Acquisition Guidance</li>
+                    <li data-i18n="service_li_3">Studio Visits & Artist Liaison</li>
+                </ul>
+            </div>
+            <div class="advising-visual" data-aos="fade-left">
+                <!-- Abstract visual representation -->
+                <div class="abstract-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section-padding" id="contact">
+        <div class="container contact-container" data-aos="fade-up">
+            <h2 class="section-heading text-center" data-i18n="contact_title">Inquiries</h2>
+            <p class="contact-sub text-center" data-i18n="contact_sub">For studio visits, acquisitions, or advisory consultation.</p>
+            
+            <form class="clean-form">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label data-i18n="form_name">Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label data-i18n="form_email">Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea rows="1" required></textarea>
+                    <label data-i18n="form_message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn" data-i18n="form_btn">Send Request</button>
+            </form>
+            
+            <div class="email-display">
+                <a href="mailto:studio@mesfintesfaye.com">studio@mesfintesfaye.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Mesfin Tesfaye. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
