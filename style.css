@@ -720,3 +720,25 @@ footer {
     color: #25d366;
     transform: translateY(-5px);
 }
+
+.social-connect {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 2rem; /* Icon size */
+    color: var(--text-color); /* Follows your theme */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Facebook Color on Hover */
+.social-icon.facebook:hover {
+    color: #1877f2; /* Facebook Blue */
+    transform: translateY(-5px);
+}
