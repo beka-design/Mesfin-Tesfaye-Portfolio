@@ -47,8 +47,8 @@ const translations = {
     en: {
         nav_about: "About",
         nav_journey: "Journey",
-        nav_works: "Works",
-        nav_services: "Advising",
+        nav_works: "Project Experience",
+        nav_services: "Consultancy",
         nav_contact: "Contact",
         hero_statement: "Form is the silence between thoughts.",
         hero_sub: "Sculptor • Painter • Art Consultant",
@@ -64,6 +64,7 @@ const translations = {
         timeline_3_desc: "Merging the practice of creation with the curation of excellence. Guiding global collections.",
         gallery_title: "Selected Sculptures",
         gallery_titl: "Painting",
+        gallery_digital: "Digital Arts",
         art_1_title: "His Majesty E.Hailesilasie",
         art_1_titl:"Presented to P.M Abiy Ahimed(D.r)",
         art_1_meta: "Sculpture, 2022",
