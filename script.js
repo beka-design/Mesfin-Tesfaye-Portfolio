@@ -509,3 +509,21 @@ if (paintingTrack && paintingPrevBtn && paintingNextBtn) {
         paintingTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
 }
+
+// --- PAINTING GALLERY SLIDER ---
+const digitalartTrack = document.getElementById('digitalartTrack');
+const digitalartPrevBtn = document.getElementById('digitalartPrevBtn');
+const digitalartNextBtn = document.getElementById('digitalartNextBtn');
+
+if (digitalartTrack && digitalartPrevBtn && digitalartNextBtn) {
+    
+    digitalartNextBtn.addEventListener('click', () => {
+        const scrollAmount = digitalartTrack.clientWidth * 0.70;
+        digitalartTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    digitalartPrevBtn.addEventListener('click', () => {
+        const scrollAmount = digitalartTrack.clientWidth * 0.70;
+        digitalartTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+}

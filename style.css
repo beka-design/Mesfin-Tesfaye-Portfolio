@@ -692,3 +692,31 @@ footer {
     .about-img-box { height: 400px; }
     .abstract-box { display: none; }
 }
+
+.social-connect {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 2rem; /* Size of the icon */
+    color: var(--text-color); /* Matches your site theme */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Telegram Color on Hover */
+.social-icon.telegram:hover {
+    color: #0088cc;
+    transform: translateY(-5px);
+}
+
+/* WhatsApp Color on Hover */
+.social-icon.whatsapp:hover {
+    color: #25d366;
+    transform: translateY(-5px);
+}
